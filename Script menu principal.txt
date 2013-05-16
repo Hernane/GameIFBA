@@ -1,0 +1,45 @@
+
+public var skinbotao : GUISkin;
+
+
+var scriptcomojogar : MenuComoJogar;
+
+
+function menuprincipal() {
+
+GUI.Box(Rect(500, 500, 500, 500), "");
+
+//Botão Iniciar
+if (GUI.Button(Rect(462,404,100,30),"Iniciar"))
+{
+// se o botao iniciar for clicado
+}
+
+
+//Botão Como Jogar
+if (GUI.Button(Rect(414,504,200,30),"Como Jogar"))
+{
+// se o botao como jogar for clicado
+}
+
+
+
+//Botão Sair do Jogo
+if(GUI.Button(Rect(462, 654, 100, 30), "Sair")) 
+{
+Application.Quit();
+}
+
+
+
+}
+
+// Função que inicia o Menu Principal
+function OnGUI () {
+//Carrega GUI skin
+GUI.skin = skinbotao;
+
+//Mostrar a Tela do Menu Principal
+menuprincipal();
+
+}

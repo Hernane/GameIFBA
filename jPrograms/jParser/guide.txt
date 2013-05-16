@@ -1,0 +1,69 @@
+jParser by Yura Shirokov (jPrograms)
+
+jParser this library to work with the standard ini files
+at the stage of beta, the library can be used only in Windows OS
+I think this problem will solve soon
+
+how do I use it?
+
+First:
+you need connect this library to project.
+
+After First:
+you need connect parser to ini file
+it's simple:
+***
+
+private jParse parse;
+private string file;
+	
+void Start () 
+{		
+    file = "test/simple.ini"; // Set ini file path
+    parse = new jParse(file); // for call function
+}
+
+***
+
+if you need read from ini file simple string
+like this:
+***
+[Section]
+
+key = string
+
+***
+
+use simple code:
+***
+parse.String("Section","key");
+***
+
+for int:
+***
+parse.Int("Section","key");
+***
+
+for Float:
+***
+parse.String("Section","key");
+***
+
+where string 
+"Section" = ([Section])
+"key" = (key = String / int / float) 
+on ini file
+
+
+for save value to ini file, use simple code:
+***
+parse.Save("Section", "key", "string");
+***
+
+where 
+"Section" = [Section]
+"key" = key
+"string" = string of key
+
+END =)
+Thanks! for use my library =)
